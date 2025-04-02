@@ -3,30 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman: Dark Edition</title>
+    <title>Hangman: Executioner's Realm</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
     <div class="game-container">
-        <h1>Hangman: Dark Edition</h1>
+        <div class="title-container">
+            <h1>Hangman: Executioner's Realm</h1>
+            <div class="skull-decoration"></div>
+        </div>
         <div class="game-area">
-            <canvas id="hangman-canvas" width="300" height="400"></canvas>
-            <div class="game-info">
-                <div id="word-display"></div>
-                <div id="guesses-left">Guesses: 6</div>
-                <div id="used-letters">Used: </div>
-                <div id="message"></div>
+            <div class="canvas-container">
+                <canvas id="hangman-canvas" width="400" height="500"></canvas>
+                <div id="weather-effects"></div>
+            </div>
+            <div class="game-interface">
+                <div class="stats">
+                    <div id="word-display" class="word-glow"></div>
+                    <div id="guesses-left" class="stat-item">Guesses: 6</div>
+                    <div id="used-letters" class="stat-item">Used: </div>
+                    <div id="score" class="stat-item">Score: 0</div>
+                </div>
+                <div id="message" class="message-box"></div>
                 <div class="controls">
                     <input type="text" id="letter-input" maxlength="1" placeholder="Letter">
-                    <button id="guess-btn">Guess</button>
-                    <button id="reset-btn">New Game</button>
+                    <button id="guess-btn" class="btn-glow">Execute Guess</button>
+                    <button id="reset-btn" class="btn-glow">New Execution</button>
+                </div>
+                <div class="difficulty">
+                    <button id="easy-btn" class="diff-btn">Easy</button>
+                    <button id="medium-btn" class="diff-btn active">Medium</button>
+                    <button id="hard-btn" class="diff-btn">Hard</button>
                 </div>
             </div>
         </div>
+        <audio id="bg-music" loop></audio>
+        <audio id="guess-sound"></audio>
+        <audio id="win-sound"></audio>
+        <audio id="lose-sound"></audio>
     </div>
     <script src="js/words.js"></script>
     <script src="js/hangman-drawing.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/audio.js"></script>
     <script src="js/game.js"></script>
 </body>
 </html>
