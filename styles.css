@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#hangman-figure {
+    font-family: monospace;
+    margin: 20px 0;
+}
+
+#word-display {
+    font-size: 2em;
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+#guesses-left, #used-letters {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#message {
+    color: #ff4444;
+    margin: 15px 0;
+    min-height: 20px;
+}
+
+#letter-input {
+    padding: 8px;
+    font-size: 1em;
+    margin-right: 10px;
+    width: 50px;
+    text-align: center;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#reset-btn {
+    background-color: #2196F3;
+}
+
+#reset-btn:hover {
+    background-color: #1976D2;
+}
